@@ -11,6 +11,30 @@ $(document).on('click', '.cateBtn', function () {
     var id = $(this).data('cid');
     fetchNote(id);
 })
+var searchReq = null;   
+$(function(){
+    var minlength = 1;
+    $('#search_bar').keyup(function(){
+        var that = this,
+        value = $('#search_bar').val();
+        if(value.length >= minlength){
+            // alert(value);
+            if(searchReq != null) searchReq.abort();
+            searchReq =
+                $.ajax({
+                    url: "searchNote.php",
+                    type: "POST",
+                    data: {'search_key': value},
+                    dataType: 'json',
+                    success: function(data){
+                        // if(value == $(that).val())
+                            $('#noteList').html(data.html);
+                    }
+                })
+        }
+    })
+})
+
 $(document).on('click', '.noteText', function (e) {
     // e.preventDefault();
     var nid = $(this).data('txt_id');

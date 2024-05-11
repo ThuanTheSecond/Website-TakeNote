@@ -18,8 +18,8 @@ if (isset($_POST["login"])) {
     } else {
         if (isset($_POST['remember'])) {
             //set up cookies
-            setcookie('user', $result['acc_username'], time() + (60 * 10));
-            setcookie('pass', $result['acc_password'], time() + (60 * 10));
+            setcookie('user', $result['acc_username'], time() + (60 * 60 * 24));
+            setcookie('pass', $result['acc_password'], time() + (60 * 60 * 24));
         }
         $_SESSION['id'] = $result['acc_id'];
         header("Location:.\home\home.php");

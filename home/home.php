@@ -65,6 +65,11 @@ $cateList = $queryCate->fetch_all(MYSQLI_ASSOC);
                     <div class="col-xl-9 nav1">
                         <span class="note_title">NOTE</span>
                         <button class='btn btn-primary addbtn fa fa-plus' id='button_add_note'></button>
+                        <span>
+                            <form>
+                                <input type="search" name="search_bar" id="search_bar" class="form-control" placeholder="Search title or description" style="border-radius: 8px;border: 2px solid black;">
+                            </form>
+                        </span>
                     </div>
                     <div class="col-xl nav2">
                         <span class="User_name"><?php if (isset($_SESSION['username'])) echo $_SESSION['username'] ?> <a class="log_out" href="..\users\logout.php">Log out</a></span>
