@@ -1,0 +1,62 @@
+div#userform{
+    border: 3px outset brown;
+    margin: 56px auto 2px;
+    width: 500px;
+    background-color: #1D4B40;
+}
+h2.sign_title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 45px;
+    color: rgb(248, 211, 162);
+}
+.form-group {
+    margin: 21px 7px 26px;
+}
+input.logout-form{
+    width: 440px;
+    margin-left: 17px;
+}
+input#username, input#password{
+    width: 440px;
+}
+input#username:focus, input#password:focus, input#confpass:focus{
+    width: 440px;
+    background-color: rgb(216, 197, 169);
+}
+label.formlabel, label{
+    margin-left: 17px;
+    color:rgb(248, 211, 162);
+}
+.form-group.form-check {
+    margin-left: 5px;
+    color:rgb(248, 211, 162);
+}
+input.form-check-input {
+    width: 18px;
+    height: 18px;
+}
+input.btn.btn-primary.btnlogin, input.btn.btn-primary.btnlogout {
+    margin-left: 25px;
+    background-color:brown;
+    border-color: black;
+}
+input.btn.btn-primary.btnlogin:hover, input.btn.btn-primary.btnlogout:hover{
+    margin-left: 25px;
+    background-color:rgb(231, 182, 3);
+    border-color: black;
+    color:black;
+}
+.swlogout{
+    text-align: center;
+    margin-left: 130px;
+    margin-right: 20px;
+    color:white;
+}
+.swlogout:hover{
+    color: aqua;
+}
+span.errlogin{
+    margin-left:25px;
+    color:white;
+}
